@@ -1,9 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hello, World!</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' https://code.jquery.com/jquery-3.7.1.min.js https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js; img-src 'self' data:;">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./styles/style.css">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Feature-Policy" content="geolocation 'self'; microphone 'none'; camera 'none'">
+    <script src="./js/utilities.js" type="text/javascript"></script>
+    <script src="./js/script.js" type="text/javascript"></script>
+    <script src="./js/theme.js" type="text/javascript"></script>
+
+    <link rel="icon" type="image/png" href="./images/icons/vector-calendar-icon.jpg">
+    <title>Final Countdownnnnn</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <input type="date" class="date-picker fancy-click-item hidden" id="datePicker"/> 
+    <div id="main">
+        
+        <div id="btn_controls" class="vertical-button-controls">
+        <button id="speedUpBtn" class="button-speed-up fancy-click-item" role="button"><span class="full-screen">Speed Up</span><span class="small-screen">^</span></button>
+        <button id="slowDownBtn" class="button-slow-down fancy-click-item" role="button"><span class="full-screen">Slow Down</span><span class="small-screen">v</span></button>
+        <button id="pauseBtn" class="button-pause fancy-click-item" role="button" ><span class="full-screen">Pause</span><span class="small-screen">| |</span></button>
+        </div>
+        <div class="time-group">
+            <div class="countdown-container">
+                <div class="countdown">
+                    <span id="days"></span> days
+                    <span id="hours"></span> hours
+                    <span id="minutes"></span> minutes
+                    <span id="seconds"></span> seconds
+                    <button id="datePickerBtn" class="fancy-click-item hidden" role="button">Date Picker</button>
+                </div>
+                
+            </div>
+        <div class="bouncing-dates"></div>
+        
+        </div>
+        <div class="bouncing-unit-buttons vertical-button-controls">
+            <button id="dayUnitBtn" class="button-day fancy-click-item" role="button">
+                <span id="daysCounter"></span>
+                <span class="full-screen">Days</span>
+                <span class="small-screen">D</span>
+            </button>
+            
+            <button id="weekUnitBtn" class="button-week fancy-click-item" role="button">
+                <span id="weeksCounter"></span>
+                <span class="full-screen">Weeks</span>
+                <span class="small-screen">W</span>
+            </button>
+            
+            <button id="monthUnitBtn" class="button-month fancy-click-item" role="button">
+                <span id="monthsCounter"></span>
+                <span class="full-screen">Months</span>
+                <span class="small-screen">M</span>
+            </button>
+            
+        </div>
+    </div>
+        
 </body>
 </html>
